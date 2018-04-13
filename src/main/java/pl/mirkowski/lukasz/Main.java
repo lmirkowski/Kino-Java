@@ -6,7 +6,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 
+
 public class Main extends Application {
+	
+	private static Stage primaryStage;
+	
+		
+	public static Stage getPrimaryStage() {
+		return primaryStage;
+	}
+
+	public static void setPrimaryStage(Stage primaryStage) {
+		Main.primaryStage = primaryStage;
+	}
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -16,6 +29,7 @@ public class Main extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Kino Java prezentuje...");
 			primaryStage.show();
+		
 			
 		} catch(Exception e) {
 			e.printStackTrace();
