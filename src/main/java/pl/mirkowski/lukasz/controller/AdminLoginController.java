@@ -26,6 +26,7 @@ public class AdminLoginController {
     @FXML
     private Button btn_admin_back;
 
+
     @FXML
     void adminBackAction(MouseEvent event) throws IOException {
     	Parent parent = FXMLLoader.load(getClass().getResource("/view/WelcomeView.fxml"));
@@ -37,5 +38,7 @@ public class AdminLoginController {
     void adminLoginAction(MouseEvent event) {
 
     }
+    
+    
 
 }

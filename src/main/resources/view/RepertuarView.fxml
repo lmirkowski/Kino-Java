@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="pl.mirkowski.lukasz.controller.RepertuarController">
+   <children>
+      <TableView fx:id="tbl_repertuar" layoutX="112.0" layoutY="215.0" prefHeight="451.0" prefWidth="800.0">
+        <columns>
+          <TableColumn fx:id="col_title" maxWidth="500.0" minWidth="500.0" prefWidth="500.0" resizable="false" text="Tytuł" />
+          <TableColumn fx:id="col_prod" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" resizable="false" text="Prod" />
+            <TableColumn fx:id="col_gatunek" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" resizable="false" text="Gatunek" />
+            <TableColumn fx:id="col_ogr" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" resizable="false" text="Ogr" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="361.0" prefHeight="132.0" prefWidth="303.0" text="Repertuar" textAlignment="CENTER">
+         <font>
+            <Font name="Javanese Text" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_back" layoutX="945.0" layoutY="705.0" mnemonicParsing="false" onMouseClicked="#backToWelcomeView" text="Powrót" />
+      <ComboBox fx:id="cb_choose_day" layoutX="762.0" layoutY="168.0" prefWidth="150.0" />
+      <Label layoutX="642.0" layoutY="173.0" text="Wybierz dzień">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_filmlist" layoutX="112.0" layoutY="168.0" mnemonicParsing="false" onMouseClicked="#showFilmList" prefHeight="31.0" prefWidth="164.0" text="Filmy">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

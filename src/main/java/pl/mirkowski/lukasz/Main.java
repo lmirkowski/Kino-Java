@@ -16,13 +16,15 @@ public class Main extends Application {
 		return primaryStage;
 	}
 
-	public static void setPrimaryStage(Stage primaryStage) {
+	private static void setPrimaryStage(Stage primaryStage) {
 		Main.primaryStage = primaryStage;
 	}
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
+			setPrimaryStage(primaryStage);
 			
 			Parent parent = FXMLLoader.load(getClass().getResource("/view/WelcomeView.fxml"));
 			Scene scene = new Scene(parent);
