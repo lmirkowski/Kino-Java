@@ -6,6 +6,33 @@
 	<artifactId>Kino</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
 	<name>Kino</name>
+
+	<properties>
+		<mail.version>1.4.7</mail.version>
+		<mysql.version>5.1.46</mysql.version>
+		<hibernate.version>4.3.11.Final</hibernate.version>
+	</properties>
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>${mail.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
