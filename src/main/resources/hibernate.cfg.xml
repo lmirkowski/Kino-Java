@@ -15,7 +15,7 @@
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<!-- mapowanie encji na tabela i tabel na encje -->
 		<mapping class="pl.mirkowski.lukasz.model.Film" />
-<!-- 		<mapping class="pl.pwn.reaktor.model.User" /> -->
+		<mapping class="pl.mirkowski.lukasz.model.Login" />
 		
 	</session-factory>
 </hibernate-configuration>
