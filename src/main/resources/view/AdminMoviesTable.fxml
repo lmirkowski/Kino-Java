@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="pl.mirkowski.lukasz.controller.AdminMoviesTableController">
+   <children>
+      <TableView fx:id="tbl_movies" layoutY="105.0" prefHeight="417.0" prefWidth="1024.0">
+        <columns>
+          <TableColumn fx:id="col_title" prefWidth="120.0" text="Tytuł" />
+            <TableColumn fx:id="col_rezyser" minWidth="0.0" prefWidth="73.0" text="Reżyser" />
+          <TableColumn fx:id="col_rok" prefWidth="52.0" text="Rok produkcji" />
+            <TableColumn fx:id="col_czastrw" prefWidth="48.0" text="Czas trwania" />
+            <TableColumn fx:id="col_prod" prefWidth="82.0" text="Kraj" />
+            <TableColumn fx:id="col_obsada" prefWidth="153.0" text="Obsada" />
+            <TableColumn fx:id="col_ogr" prefWidth="55.0" text="Ogr. wiekowe" />
+            <TableColumn fx:id="col_gatunek" prefWidth="87.0" text="Gatunek" />
+            <TableColumn fx:id="col_opis" prefWidth="353.0" text="Opis" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
