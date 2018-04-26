@@ -15,7 +15,7 @@ public class FilmService {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
-		Query querry = session.createQuery("SELECT f.title, f.kraj, f.gatunek, f.ogr_wiek FROM Film f");
+		Query querry = session.createQuery("SELECT f FROM Film f");
 
 		@SuppressWarnings("unchecked")
 		List<Film> films = querry.list();
