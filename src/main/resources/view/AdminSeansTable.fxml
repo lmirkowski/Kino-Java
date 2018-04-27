@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mirkowski.lukasz.controller.AdminSeansTableController">
+   <children>
+      <TableView fx:id="tbl_seans" layoutX="165.0" layoutY="172.0" prefHeight="407.0" prefWidth="695.0">
+        <columns>
+          <TableColumn fx:id="col_data" prefWidth="241.0" text="Data" />
+            <TableColumn fx:id="col_godzina" minWidth="0.0" prefWidth="188.0" text="Godzina" />
+          <TableColumn fx:id="col_film" minWidth="0.0" prefWidth="136.0" text="Film" />
+            <TableColumn fx:id="col_sala" minWidth="0.0" prefWidth="129.0" text="Sala" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_dodaj_seans" layoutX="51.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#addSeans" prefWidth="100.0" text="Dodaj seans" />
+      <Button fx:id="btn_back" layoutX="750.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#goBack" prefWidth="100.0" text="Back" />
+      <Button fx:id="btn_logout" layoutX="882.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#logOut" prefWidth="100.0" text="LogOut" />
+      <Button fx:id="btn_usun_seans" layoutX="185.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedSeans" prefWidth="100.0" text="Usuń seans" />
+      <Label layoutX="350.0" layoutY="34.0" text="Edycja tabeli &quot;seans&quot;">
+         <font>
+            <Font name="Javanese Text" size="36.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
-

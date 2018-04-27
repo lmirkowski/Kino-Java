@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="pl.mirkowski.lukasz.controller.AdminMoviesTableController">
    <children>
-      <TableView fx:id="tbl_movies" layoutY="105.0" prefHeight="417.0" prefWidth="1024.0">
+      <TableView fx:id="tbl_movies" layoutY="172.0" prefHeight="407.0" prefWidth="1024.0">
         <columns>
           <TableColumn fx:id="col_title" prefWidth="120.0" text="Tytuł" />
             <TableColumn fx:id="col_rezyser" minWidth="0.0" prefWidth="73.0" text="Reżyser" />
@@ -20,5 +23,14 @@
             <TableColumn fx:id="col_opis" prefWidth="353.0" text="Opis" />
         </columns>
       </TableView>
+      <Button fx:id="btn_dodaj_film" layoutX="51.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#addMovie" prefWidth="100.0" text="Dodaj film" />
+      <Button fx:id="btn_back" layoutX="750.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#goBack" prefWidth="100.0" text="Back" />
+      <Button fx:id="btn_logout" layoutX="882.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#logOut" prefWidth="100.0" text="LogOut" />
+      <Button fx:id="btn_usun_film" layoutX="185.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#deleteSelectedMovie" prefWidth="100.0" text="Usuń film" />
+      <Label layoutX="361.0" layoutY="35.0" text="Edycja tabeli &quot;film&quot;">
+         <font>
+            <Font name="Javanese Text" size="36.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

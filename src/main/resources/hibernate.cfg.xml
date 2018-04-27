@@ -16,6 +16,7 @@
 		<!-- mapowanie encji na tabela i tabel na encje -->
 		<mapping class="pl.mirkowski.lukasz.model.Film" />
 		<mapping class="pl.mirkowski.lukasz.model.Login" />
+		<mapping class="pl.mirkowski.lukasz.model.Seans" />
 		
 	</session-factory>
 </hibernate-configuration>

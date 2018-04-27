@@ -45,8 +45,10 @@ public class AdminPanelViewController {
     }
 
     @FXML
-    void showSeansAdmin(MouseEvent event) {
-
+    void showSeansAdmin(MouseEvent event) throws IOException {
+    	Parent parent = FXMLLoader.load(getClass().getResource("/view/AdminSeansTable.fxml"));
+    	Scene scene = new Scene(parent);
+    	Main.getPrimaryStage().setScene(scene);
     }
 
 }

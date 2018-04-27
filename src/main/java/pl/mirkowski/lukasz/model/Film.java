@@ -25,7 +25,7 @@ public class Film {
 	@Column(columnDefinition="longtext")
 	private String opis;
 	
-	public long getIdfilm() {
+	public int getIdfilm() {
 		return idfilm;
 	}
 	public void setIdfilm(int idfilm) {

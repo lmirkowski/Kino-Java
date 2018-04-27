@@ -7,28 +7,28 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import pl.mirkowski.lukasz.model.Film;
+import pl.mirkowski.lukasz.model.Seans;
 import pl.mirkowski.lukasz.util.HibernateUtil;
 
-
-public class FilmService {
-	public List<Film> getAll() {
+public class SeansService {
+	public List<Seans> getAll() {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
-		Query querry = session.createQuery("SELECT f FROM Film f");
+		Query querry = session.createQuery("SELECT s FROM Seans s");
 
 		@SuppressWarnings("unchecked")
-		List<Film> films = querry.list();
+		List<Seans> seans = querry.list();
 		trx.commit();
 		session.close();
-		return films;
+		return seans;
 	}
 
 	public void delete(int id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
 
-		Query querry = session.createQuery("DELETE FROM Film WHERE id=:id");
+		Query querry = session.createQuery("DELETE FROM Seans WHERE id=:id");
 		querry.setLong("id", id);
 		querry.executeUpdate();
 
@@ -37,14 +37,15 @@ public class FilmService {
 
 	}
 
-	public int save(Film film) {
+	public int save(Seans seans) {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
 
-		int id = (int) session.save(film);
+		int id = (int) session.save(seans);
 		transaction.commit();
 		session.close();
 		return id;
 	}
+
 }
