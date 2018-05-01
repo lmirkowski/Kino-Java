@@ -17,6 +17,8 @@
 		<mapping class="pl.mirkowski.lukasz.model.Film" />
 		<mapping class="pl.mirkowski.lukasz.model.Login" />
 		<mapping class="pl.mirkowski.lukasz.model.Seans" />
+		<mapping class="pl.mirkowski.lukasz.model.Reservation" />
+		<mapping class="pl.mirkowski.lukasz.model.Rezerwacje" />
 		
 	</session-factory>
 </hibernate-configuration>

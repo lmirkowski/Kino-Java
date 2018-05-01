@@ -40,8 +40,10 @@ public class AdminPanelViewController {
     }
 
     @FXML
-    void showReservationAdmin(MouseEvent event) {
-
+    void showReservationAdmin(MouseEvent event) throws IOException {
+    	Parent parent = FXMLLoader.load(getClass().getResource("/view/AdminReservationTable.fxml"));
+    	Scene scene = new Scene(parent);
+    	Main.getPrimaryStage().setScene(scene);
     }
 
     @FXML

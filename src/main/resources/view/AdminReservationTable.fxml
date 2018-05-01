@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.mirkowski.lukasz.controller.AdminReservationTableController">
+   <children>
+      <TableView fx:id="tbl_rezerwacje" layoutY="172.0" prefHeight="407.0" prefWidth="1024.0">
+        <columns>
+          <TableColumn fx:id="col_nr_rezerw" prefWidth="76.0" text="Nr rezerwacji" />
+            <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="184.0" text="Tytuł" />
+          <TableColumn fx:id="col_data" prefWidth="94.0" text="Data" />
+            <TableColumn fx:id="col_godzina" prefWidth="71.0" text="Godzina" />
+            <TableColumn fx:id="col_sala" prefWidth="53.0" text="Sala" />
+            <TableColumn fx:id="col_imie" prefWidth="143.0" text="Imię" />
+            <TableColumn fx:id="col_nazwisko" prefWidth="136.0" text="Nazwisko" />
+            <TableColumn fx:id="col_email" prefWidth="120.0" text="email" />
+            <TableColumn fx:id="col_telefon" prefWidth="146.0" text="Telefon" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_usun_rezerwacje" layoutX="51.0" layoutY="614.0" mnemonicParsing="false" onMouseClicked="#deleteReservation" prefHeight="31.0" prefWidth="124.0" text="Usuń rezerwację" />
+      <Button fx:id="btn_back" layoutX="750.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#goBack" prefWidth="100.0" text="Back" />
+      <Button fx:id="btn_logout" layoutX="882.0" layoutY="685.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#logOut" prefWidth="100.0" text="LogOut" />
+      <Label layoutX="361.0" layoutY="35.0" text="Edycja tabeli &quot;rezerwacje&quot;">
+         <font>
+            <Font name="Javanese Text" size="36.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>
-

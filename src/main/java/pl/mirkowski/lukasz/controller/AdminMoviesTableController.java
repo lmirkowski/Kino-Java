@@ -79,14 +79,14 @@ public class AdminMoviesTableController {
 			Alert error = new Alert(AlertType.ERROR);
 			error.setHeaderText("Error");
 			error.setContentText("Please select Item before clicked Delete");
-			error.setTitle("No selectrd item!");
+			error.setTitle("No selected item!");
 			error.show();
 			return;
 
 		}
 		int id = tbl_movies.getSelectionModel().getSelectedItem().getIdfilm();
 		filmService.delete(id);
-		loadDataToColumns();; // metoda zrefaktoryzowana z metody initialize -- nabicie danymi tabeli
+		loadDataToColumns(); // metoda zrefaktoryzowana z metody initialize -- nabicie danymi tabeli
 	}
     
 

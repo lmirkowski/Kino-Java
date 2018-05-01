@@ -6,28 +6,29 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import pl.mirkowski.lukasz.model.Seans;
+import pl.mirkowski.lukasz.model.Reservation;
 import pl.mirkowski.lukasz.util.HibernateUtil;
 
-public class SeansService {
-	public List<Seans> getAll() {
-
+public class ReservationService {
+	
+	public List<Reservation> getAll(){
+		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
-		Query querry = session.createQuery("SELECT s FROM Seans s");
+		Query querry = session.createQuery("SELECT r FROM Reservation r");
 
 		@SuppressWarnings("unchecked")
-		List<Seans> seans = querry.list();
+		List<Reservation> reservations = querry.list();
 		trx.commit();
 		session.close();
-		return seans;
+		return reservations;
 	}
-
+	
 	public void delete(int id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction trx = session.beginTransaction();
 
-		Query querry = session.createQuery("DELETE FROM Seans WHERE id=:id");
+		Query querry = session.createQuery("DELETE FROM Rezerwacje WHERE id=:id");
 		querry.setLong("id", id);
 		querry.executeUpdate();
 
@@ -35,13 +36,13 @@ public class SeansService {
 		session.close();
 
 	}
-
-	public int save(Seans seans) {
+	
+	public int save(Reservation	reservation) {
 
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
 
-		int id = (int) session.save(seans);
+		int id = (int) session.save(reservation);
 		transaction.commit();
 		session.close();
 		return id;
