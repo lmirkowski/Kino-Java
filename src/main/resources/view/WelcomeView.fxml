@@ -3,6 +3,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -18,7 +19,7 @@
       </ImageView>
       <AnchorPane layoutX="95.0" layoutY="79.0" prefHeight="484.0" prefWidth="852.0">
          <children>
-            <Label alignment="CENTER" layoutX="186.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="483.0" text="KINO Java" textAlignment="CENTER" textFill="#2613cf">
+            <Label alignment="CENTER" layoutX="186.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="483.0" text="KINO JavaFX" textAlignment="CENTER" textFill="#2613cf">
                <font>
                   <Font name="Javanese Text" size="77.0" />
                </font>
@@ -26,20 +27,18 @@
                   <Cursor fx:constant="DISAPPEAR" />
                </cursor>
             </Label>
-            <Label alignment="CENTER" layoutX="272.0" layoutY="164.0" prefHeight="72.0" prefWidth="311.0" text="prezentuje..." textFill="#2613cf">
+            <Button fx:id="btn_repertIRezerw" alignment="CENTER" defaultButton="true" layoutX="232.0" layoutY="220.0" mnemonicParsing="false" onMouseClicked="#repertuarAction" prefHeight="90.0" prefWidth="392.0" text="Repertuar i rezerwacja biletów" textAlignment="JUSTIFY">
                <font>
-                  <Font name="Javanese Text" size="40.0" />
-               </font>
-            </Label>
-            <Button fx:id="btn_repertIRezerw" alignment="CENTER" layoutX="99.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#repertuarAction" prefHeight="63.0" prefWidth="263.0" text="Repertuar i rezerwacja biletów">
-               <font>
-                  <Font name="Javanese Text" size="18.0" />
+                  <Font name="Javanese Text" size="24.0" />
                </font>
                <effect>
-                  <InnerShadow />
+                  <InnerShadow color="#5bd0e8">
+                     <input>
+                        <Glow />
+                     </input></InnerShadow>
                </effect>
             </Button>
-            <Button fx:id="btn_panelAdm" alignment="CENTER" layoutX="494.0" layoutY="311.0" mnemonicParsing="false" onMouseClicked="#panelAdmAction" prefHeight="63.0" prefWidth="263.0" text="Panel administratora">
+            <Button fx:id="btn_panelAdm" alignment="CENTER" layoutX="629.0" layoutY="386.0" mnemonicParsing="false" onMouseClicked="#panelAdmAction" prefHeight="48.0" prefWidth="187.0" text="Panel administratora">
                <font>
                   <Font name="Javanese Text" size="18.0" />
                </font>

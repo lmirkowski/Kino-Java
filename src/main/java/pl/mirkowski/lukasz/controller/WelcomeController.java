@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import pl.mirkowski.lukasz.Main;
 
 
@@ -39,6 +40,7 @@ public class WelcomeController {
 		Parent parent = FXMLLoader.load(getClass().getResource("/view/RepertuarView.fxml"));
 		Scene scene = new Scene(parent);
 		Main.getPrimaryStage().setScene(scene);
+		scene.setFill(Color.TRANSPARENT);
 
 	}
 
