@@ -61,6 +61,11 @@ public class AdminReservationTableController {
 
 	@FXML
 	private Button btn_logout;
+	
+	@FXML
+    void closeWindow(MouseEvent event) {
+		Main.getPrimaryStage().close();
+    }
 
 	@FXML
 	void deleteReservation(MouseEvent event) {

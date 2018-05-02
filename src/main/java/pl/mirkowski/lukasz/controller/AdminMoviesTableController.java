@@ -68,6 +68,11 @@ public class AdminMoviesTableController {
 
 	@FXML
 	private Button btn_usun_film;
+	
+	@FXML
+    void closeWindow(MouseEvent event) {
+		Main.getPrimaryStage().close();
+    }
 
 	@FXML
 	void addMovie(MouseEvent event) throws IOException {

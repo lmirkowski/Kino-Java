@@ -46,5 +46,14 @@ public class SeansService {
 		session.close();
 		return id;
 	}
+	
+	public void update(Seans selectedItem) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+
+		session.saveOrUpdate(selectedItem);
+		transaction.commit();
+		session.close();
+	}
 
 }

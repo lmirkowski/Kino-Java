@@ -23,6 +23,11 @@ public class AdminPanelViewController {
 
     @FXML
     private Button btn_seans;
+    
+    @FXML
+    void closeWindow(MouseEvent event) {
+		Main.getPrimaryStage().close();
+    }
 
     @FXML
     void logOutAction(MouseEvent event) throws IOException {

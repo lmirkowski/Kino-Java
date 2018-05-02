@@ -29,6 +29,11 @@ public class AdminLoginController {
 
 	@FXML
 	private Button btn_admin_back;
+	
+	@FXML
+    void closeWindow(MouseEvent event) {
+		Main.getPrimaryStage().close();
+    }
 
 	private LoginService loginService;
 
