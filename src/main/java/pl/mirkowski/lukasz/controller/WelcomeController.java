@@ -18,6 +18,11 @@ public class WelcomeController {
 
 	@FXML
 	private Button btn_panelAdm;
+	
+	@FXML
+    void closeWindow(MouseEvent event) {
+		Main.getPrimaryStage().close();
+    }
 
 	@FXML
 	void panelAdmAction(MouseEvent event) throws IOException {

@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 
 
@@ -29,7 +30,7 @@ public class Main extends Application {
 			Parent parent = FXMLLoader.load(getClass().getResource("/view/WelcomeView.fxml"));
 			Scene scene = new Scene(parent);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Kino Java prezentuje...");
+			primaryStage.initStyle(StageStyle.UNDECORATED);
 			primaryStage.show();
 		
 			

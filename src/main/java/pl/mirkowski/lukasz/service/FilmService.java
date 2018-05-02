@@ -10,6 +10,7 @@ import pl.mirkowski.lukasz.model.Film;
 import pl.mirkowski.lukasz.util.HibernateUtil;
 
 
+
 public class FilmService {
 	public List<Film> getAll() {
 
@@ -46,5 +47,14 @@ public class FilmService {
 		transaction.commit();
 		session.close();
 		return id;
+	}
+	
+	public void update(Film selectedItem) {
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+
+		session.saveOrUpdate(selectedItem);
+		transaction.commit();
+		session.close();
 	}
 }
