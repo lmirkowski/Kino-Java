@@ -16,6 +16,16 @@ public class Main extends Application {
 
 	private static int selectedSeansId;
 
+	private static int selectedKlientId;
+
+	public static int getSelectedKlientId() {
+		return selectedKlientId;
+	}
+
+	public static void setSelectedKlientId(int selectedKlientId) {
+		Main.selectedKlientId = selectedKlientId;
+	}
+
 	public static int getSelectedSeansId() {
 		return selectedSeansId;
 	}

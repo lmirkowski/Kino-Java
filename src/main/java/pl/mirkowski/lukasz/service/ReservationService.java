@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import pl.mirkowski.lukasz.model.Reservation;
+import pl.mirkowski.lukasz.model.Rezerwacje;
 import pl.mirkowski.lukasz.util.HibernateUtil;
 
 public class ReservationService {
@@ -43,6 +44,17 @@ public class ReservationService {
 		Transaction transaction = session.beginTransaction();
 
 		int id = (int) session.save(reservation);
+		transaction.commit();
+		session.close();
+		return id;
+	}
+	
+	public int saveToRezerwacje(Rezerwacje rezerwacje) {
+
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction transaction = session.beginTransaction();
+
+		int id = (int) session.save(rezerwacje);
 		transaction.commit();
 		session.close();
 		return id;

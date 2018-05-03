@@ -12,11 +12,14 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import pl.mirkowski.lukasz.Main;
-import pl.mirkowski.lukasz.model.Client;
-import pl.mirkowski.lukasz.service.ClientService;
+import pl.mirkowski.lukasz.model.Klient;
+import pl.mirkowski.lukasz.model.Rezerwacje;
+import pl.mirkowski.lukasz.service.KlientService;
+import pl.mirkowski.lukasz.service.ReservationService;
 
-public class ClientController {
+public class KlientController {
 
 	@FXML
 	private ImageView img_close;
@@ -63,26 +66,44 @@ public class ClientController {
 	}
 
 	@FXML
-	void next(MouseEvent event) {
+	void next(MouseEvent event) throws IOException {
 		if (isNotCompleted()) {
 
 			showAlertFormNotCompleted();
 
 		} else {
-			ClientService clientService = new ClientService();
-			Client client = getFormData();
-			clientService.save(client);
+			KlientService klientService = new KlientService();
+			Klient klient = getFormData();
+			klientService.save(klient);
+			
+			int id = klient.getId();
+			Main.setSelectedKlientId(id);
+			
+			ReservationService reservationService = new ReservationService();
+			Rezerwacje rezerwacje = getData();
+			reservationService.saveToRezerwacje(rezerwacje);
+			
+			Parent parent = FXMLLoader.load(getClass().getResource("/view/SummaryView.fxml"));
+			Scene scene = new Scene(parent);
+			Main.getPrimaryStage().setScene(scene);
+			scene.setFill(Color.TRANSPARENT);
 		}
 
 	}
+	
+	private Rezerwacje getData() {
+		int seans_idseans = Main.getSelectedSeansId();
+		int klient_idklient = Main.getSelectedKlientId();
+		return new Rezerwacje(seans_idseans,klient_idklient);
+	}
 
-	private Client getFormData() {
+	private Klient getFormData() {
 		String imie = tf_name.getText();
 		String nazwisko = tf_surname.getText();
 		String email = tf_email.getText();
 		String telefon = tf_telefon.getText();
 
-		return new Client(imie, nazwisko, email, telefon);
+		return new Klient(imie, nazwisko, email, telefon);
 
 	}
 

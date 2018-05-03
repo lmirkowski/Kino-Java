@@ -6,20 +6,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Client {
+public class Klient {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int Id;
+	private int idklient;
 	private String imie;
 	private String nazwisko;
 	private String email;
 	private String telefon;
 	public int getId() {
-		return Id;
+		return idklient;
 	}
 	public void setId(int id) {
-		Id = id;
+		idklient = id;
 	}
 	public String getImie() {
 		return imie;
@@ -45,19 +45,19 @@ public class Client {
 	public void setTelefon(String telefon) {
 		this.telefon = telefon;
 	}
-	public Client() {
+	public Klient() {
 		super();
 	}
-	public Client(String imie, String nazwisko, String email, String telefon) {
+	public Klient(String imie, String nazwisko, String email, String telefon) {
 		super();
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.email = email;
 		this.telefon = telefon;
 	}
-	public Client(int id, String imie, String nazwisko, String email, String telefon) {
+	public Klient(int id, String imie, String nazwisko, String email, String telefon) {
 		super();
-		Id = id;
+		idklient = id;
 		this.imie = imie;
 		this.nazwisko = nazwisko;
 		this.email = email;
@@ -65,14 +65,14 @@ public class Client {
 	}
 	@Override
 	public String toString() {
-		return "Client [Id=" + Id + ", imie=" + imie + ", nazwisko=" + nazwisko + ", email=" + email + ", telefon="
+		return "Client [Id=" + idklient + ", imie=" + imie + ", nazwisko=" + nazwisko + ", email=" + email + ", telefon="
 				+ telefon + "]";
 	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + Id;
+		result = prime * result + idklient;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((imie == null) ? 0 : imie.hashCode());
 		result = prime * result + ((nazwisko == null) ? 0 : nazwisko.hashCode());
@@ -87,8 +87,8 @@ public class Client {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Client other = (Client) obj;
-		if (Id != other.Id)
+		Klient other = (Klient) obj;
+		if (idklient != other.idklient)
 			return false;
 		if (email == null) {
 			if (other.email != null)

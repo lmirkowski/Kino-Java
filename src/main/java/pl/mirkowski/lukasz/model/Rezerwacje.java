@@ -33,6 +33,12 @@ public class Rezerwacje {
 	public Rezerwacje() {
 		super();
 	}
+	
+	public Rezerwacje(int seans_idseans, int klient_idklient) {
+		super();
+		this.seans_idseans = seans_idseans;
+		this.klient_idklient = klient_idklient;
+	}
 	public Rezerwacje(int idrezerwacje, int seans_idseans, int klient_idklient) {
 		super();
 		this.idrezerwacje = idrezerwacje;

@@ -3,20 +3,20 @@ package pl.mirkowski.lukasz.service;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import pl.mirkowski.lukasz.model.Client;
+import pl.mirkowski.lukasz.model.Klient;
 import pl.mirkowski.lukasz.util.HibernateUtil;
 
 
-public class ClientService {
+public class KlientService {
 	
-	public int save(Client client) {
+	public int save(Klient klient) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Transaction transaction = session.beginTransaction();
 
-		int id = (int) session.save(client);
+		int idklient = (int) session.save(klient);
 		transaction.commit();
 		session.close();
-		return id;
+		return idklient;
 	}
 
 }
