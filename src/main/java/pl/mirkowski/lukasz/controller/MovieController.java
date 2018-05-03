@@ -15,6 +15,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import pl.mirkowski.lukasz.Main;
 import pl.mirkowski.lukasz.model.Film;
@@ -74,8 +75,12 @@ public class MovieController {
 	}
 
 	@FXML
-	void reservationAction(MouseEvent event) {
+	void dateAndTime(MouseEvent event) throws IOException {
 
+		Parent parent = FXMLLoader.load(getClass().getResource("/view/SeansView.fxml"));
+		Scene scene = new Scene(parent);
+		Main.getPrimaryStage().setScene(scene);
+		scene.setFill(Color.TRANSPARENT);
 	}
 
 	private FilmService filmService;
@@ -125,14 +130,14 @@ public class MovieController {
 		setWrapCellFactory(col_title);
 
 	}
-		
+
 	public void initialize() {
-		
+
 		setCellWrapable();
 
 		loadDataToColumns();
 		setCellValue();
-		
+
 	}
 
 }

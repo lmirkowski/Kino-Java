@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -31,6 +32,9 @@
          <image>
             <Image url="@../images/cross-icon.png" />
          </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </ImageView>
       <Button fx:id="btn_opis_filmu" layoutX="113.0" layoutY="769.0" mnemonicParsing="false" onMouseClicked="#showMovie" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="OPIS FILMU" />
       <Button fx:id="btn_goback" layoutX="793.0" layoutY="769.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07#ddbd07;" text="POWRÓT" />

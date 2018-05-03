@@ -19,6 +19,7 @@
 		<mapping class="pl.mirkowski.lukasz.model.Seans" />
 		<mapping class="pl.mirkowski.lukasz.model.Reservation" />
 		<mapping class="pl.mirkowski.lukasz.model.Rezerwacje" />
+		<mapping class="pl.mirkowski.lukasz.model.Client" />
 		
 	</session-factory>
 </hibernate-configuration>

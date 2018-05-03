@@ -55,5 +55,21 @@ public class SeansService {
 		transaction.commit();
 		session.close();
 	}
+	
+	public List<Seans> showSeansWhenChosenFilm(int id) {
+
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction trx = session.beginTransaction();
+		Query query = session.createQuery("FROM Seans WHERE film_idfilm=:selectedFilmId");
+		
+		query.setInteger("selectedFilmId", id);
+		@SuppressWarnings("unchecked")
+		List<Seans> selectedSeanses = query.list();
+		
+		trx.commit();
+		session.close();
+
+		return selectedSeanses;
+		}
 
 }
