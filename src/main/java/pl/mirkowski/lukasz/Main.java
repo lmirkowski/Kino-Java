@@ -13,7 +13,18 @@ public class Main extends Application {
 	
 	private static Stage primaryStage;
 	
+	private static int selectedFilmId;
+	
 		
+		
+	public static int getSelectedFilmId() {
+		return selectedFilmId;
+	}
+
+	public static void setSelectedFilmId(int selectedFilmId) {
+		Main.selectedFilmId = selectedFilmId;
+	}
+
 	public static Stage getPrimaryStage() {
 		return primaryStage;
 	}

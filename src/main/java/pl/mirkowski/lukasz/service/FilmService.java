@@ -24,6 +24,19 @@ public class FilmService {
 		session.close();
 		return films;
 	}
+	
+	public List<Film> getById(int id) {
+
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction trx = session.beginTransaction();
+		Query querry = session.createQuery("SELECT f FROM Film f where id=:id");
+		querry.setInteger("id", id);
+		@SuppressWarnings("unchecked")
+		List<Film> films = querry.list();
+		trx.commit();
+		session.close();
+		return films;
+	}
 
 	public void delete(int id) {
 		Session session = HibernateUtil.getSessionFactory().openSession();
@@ -57,4 +70,23 @@ public class FilmService {
 		transaction.commit();
 		session.close();
 	}
+	
+	
+	public Film selectFilmFromRepertuar(int id) {
+
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction trx = session.beginTransaction();
+
+		Query query = session.createQuery("FROM Film WHERE id=:selectedFilmId");
+		query.setInteger("selectedFilmId", id);
+		@SuppressWarnings("unchecked")
+		List<Film> selectedFilms = query.list();
+		Film selectedFilm = selectedFilms.get(0);
+		trx.commit();
+		session.close();
+
+		return selectedFilm;
+		}
+	
+	
 }
