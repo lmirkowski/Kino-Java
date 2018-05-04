@@ -38,17 +38,17 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <TableView fx:id="tbl_rezerwacje" layoutX="13.0" layoutY="367.0" prefHeight="118.0" prefWidth="1000.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="tbl_rezerwacje" layoutX="13.0" layoutY="367.0" prefHeight="100.0" prefWidth="1000.0" style="-fx-background-color: #ddbd07;">
          <columns>
-            <TableColumn fx:id="col_nr_rezerw" prefWidth="76.0" style="-fx-background-color: #ddbd07;" text="Nr rezerwacji" />
-            <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="184.0" style="-fx-background-color: #ddbd07;" text="Tytuł" />
-            <TableColumn fx:id="col_data" prefWidth="94.0" style="-fx-background-color: #ddbd07;" text="Data" />
-            <TableColumn fx:id="col_godzina" prefWidth="71.0" style="-fx-background-color: #ddbd07;" text="Godzina" />
-            <TableColumn fx:id="col_sala" prefWidth="53.0" style="-fx-background-color: #ddbd07;" text="Sala" />
-            <TableColumn fx:id="col_imie" prefWidth="143.0" style="-fx-background-color: #ddbd07;" text="Imię" />
-            <TableColumn fx:id="col_nazwisko" prefWidth="136.0" style="-fx-background-color: #ddbd07;" text="Nazwisko" />
-            <TableColumn fx:id="col_email" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="email" />
-            <TableColumn fx:id="col_telefon" prefWidth="146.0" style="-fx-background-color: #ddbd07;" text="Telefon" />
+            <TableColumn fx:id="col_nr_rezerw" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-color: #ddbd07;" text="Nr rezerwacji" />
+            <TableColumn fx:id="col_title" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" style="-fx-background-color: #ddbd07;" text="Tytuł" />
+            <TableColumn fx:id="col_data" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" style="-fx-background-color: #ddbd07;" text="Data" />
+            <TableColumn fx:id="col_godzina" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" style="-fx-background-color: #ddbd07;" text="Godzina" />
+            <TableColumn fx:id="col_sala" maxWidth="108.0" minWidth="108.0" prefWidth="108.0" style="-fx-background-color: #ddbd07;" text="Sala" />
+            <TableColumn fx:id="col_imie" maxWidth="90.0" minWidth="90.0" prefWidth="90.0" style="-fx-background-color: #ddbd07;" text="Imię" />
+            <TableColumn fx:id="col_nazwisko" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="Nazwisko" />
+            <TableColumn fx:id="col_email" maxWidth="160.0" minWidth="160.0" prefWidth="160.0" style="-fx-background-color: #ddbd07;" text="email" />
+            <TableColumn fx:id="col_telefon" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" style="-fx-background-color: #ddbd07;" text="Telefon" />
          </columns>
       </TableView>
       <Label layoutX="20.0" layoutY="698.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Jeśli chcesz otrzymać potwierdzenie rezerwacji mailem, kliknij przycisk poniżej" textFill="#ddbd07" wrapText="true">
@@ -66,5 +66,6 @@
             <Font size="36.0" />
          </font>
       </Label>
+      <Label layoutX="432.0" layoutY="865.0" text="© Łukasz Mirkowski 2018" textFill="#ddbd07" />
    </children>
 </AnchorPane>

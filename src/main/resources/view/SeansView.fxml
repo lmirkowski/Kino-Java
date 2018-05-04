@@ -28,10 +28,10 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <TableView fx:id="tbl_seans" layoutX="175.0" layoutY="389.0" prefHeight="200.0" prefWidth="660.0" style="-fx-background-radius: 10;">
+      <TableView fx:id="tbl_seans" layoutX="175.0" layoutY="389.0" prefHeight="200.0" prefWidth="660.0">
          <columns>
-            <TableColumn fx:id="col_data" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" style="-fx-background-color: #ddbd07;" text="Data" />
-            <TableColumn fx:id="col_godzina" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" style="-fx-background-color: #ddbd07;" text="Godzina" />
+            <TableColumn fx:id="col_data" maxWidth="329.0" minWidth="329.0" prefWidth="329.0" style="-fx-background-color: #ddbd07;" text="Data" />
+            <TableColumn fx:id="col_godzina" maxWidth="329.0" minWidth="329.0" prefWidth="329.0" style="-fx-background-color: #ddbd07;" text="Godzina" />
          </columns>
       </TableView>
       <Label layoutX="204.0" layoutY="29.0" text="DATA I GODZINA SEANSU" textFill="#ddbd07">
@@ -39,5 +39,6 @@
             <Font name="Javanese Text" size="48.0" />
          </font>
       </Label>
+      <Label layoutX="428.0" layoutY="865.0" text="© Łukasz Mirkowski 2018" textFill="#ddbd07" />
    </children>
 </AnchorPane>
