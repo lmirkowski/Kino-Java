@@ -75,26 +75,31 @@ public class KlientController {
 			KlientService klientService = new KlientService();
 			Klient klient = getFormData();
 			klientService.save(klient);
-			
+
 			int id = klient.getId();
 			Main.setSelectedKlientId(id);
-			
+
 			ReservationService reservationService = new ReservationService();
 			Rezerwacje rezerwacje = getData();
 			reservationService.saveToRezerwacje(rezerwacje);
+			
+			int idrezerwacje = rezerwacje.getIdrezerwacje();
+			Main.setSelectedReservationId(idrezerwacje);
 			
 			Parent parent = FXMLLoader.load(getClass().getResource("/view/SummaryView.fxml"));
 			Scene scene = new Scene(parent);
 			Main.getPrimaryStage().setScene(scene);
 			scene.setFill(Color.TRANSPARENT);
+			
+
 		}
 
 	}
-	
+
 	private Rezerwacje getData() {
 		int seans_idseans = Main.getSelectedSeansId();
 		int klient_idklient = Main.getSelectedKlientId();
-		return new Rezerwacje(seans_idseans,klient_idklient);
+		return new Rezerwacje(seans_idseans, klient_idklient);
 	}
 
 	private Klient getFormData() {

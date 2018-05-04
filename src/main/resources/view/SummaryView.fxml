@@ -3,6 +3,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -18,22 +20,40 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Button fx:id="btn_dalej" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#next" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #ddbd07;" text="REZERWUJ">
+      <Button fx:id="btn_send" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#sendEmail" prefHeight="31.0" prefWidth="267.0" style="-fx-background-color: #ddbd07;" text="WYŚLIJ POTWIERDZENIE">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Button fx:id="btn_goback" layoutX="882.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="POWRÓT">
+      <Button fx:id="btn_backtorep" layoutX="781.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBackToRep" prefHeight="31.0" prefWidth="221.0" style="-fx-background-color: #ddbd07;" text="POWRÓT DO REPERTUARU">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <Label layoutX="352.0" layoutY="30.0" text="TWOJE DANE" textFill="#ddbd07">
+      <Label layoutX="352.0" layoutY="30.0" text="REZERWACJA" textFill="#ddbd07">
          <font>
             <Font name="Javanese Text" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="146.0" text="NAZWISKO" textFill="#ddbd07">
+      <Label layoutX="20.0" layoutY="288.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Dziękujemy za dokonanie rezerwacji. Przy zakupie biletów prosimy o powołąnie się na numer rezerwacji." textFill="#ddbd07" wrapText="true">
          <font>
-            <Font name="Javanese Text" size="18.0" />
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbl_rezerwacje" layoutX="13.0" layoutY="367.0" prefHeight="118.0" prefWidth="1000.0">
+         <columns>
+            <TableColumn fx:id="col_nr_rezerw" prefWidth="76.0" text="Nr rezerwacji" />
+            <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="184.0" text="Tytuł" />
+            <TableColumn fx:id="col_data" prefWidth="94.0" text="Data" />
+            <TableColumn fx:id="col_godzina" prefWidth="71.0" text="Godzina" />
+            <TableColumn fx:id="col_sala" prefWidth="53.0" text="Sala" />
+            <TableColumn fx:id="col_imie" prefWidth="143.0" text="Imię" />
+            <TableColumn fx:id="col_nazwisko" prefWidth="136.0" text="Nazwisko" />
+            <TableColumn fx:id="col_email" prefWidth="120.0" text="email" />
+            <TableColumn fx:id="col_telefon" prefWidth="146.0" text="Telefon" />
+         </columns>
+      </TableView>
+      <Label layoutX="20.0" layoutY="522.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Jeśli chcesz otrzymać potwierdzenie rezerwacji mailem, kliknij przycisk poniżej" textFill="#ddbd07" wrapText="true">
+         <font>
+            <Font size="18.0" />
          </font>
       </Label>
    </children>

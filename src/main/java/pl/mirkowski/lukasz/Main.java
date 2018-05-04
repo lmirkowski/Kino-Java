@@ -18,6 +18,16 @@ public class Main extends Application {
 
 	private static int selectedKlientId;
 
+	private static int selectedReservationId;
+
+	public static int getSelectedReservationId() {
+		return selectedReservationId;
+	}
+
+	public static void setSelectedReservationId(int selectedReservationId) {
+		Main.selectedReservationId = selectedReservationId;
+	}
+
 	public static int getSelectedKlientId() {
 		return selectedKlientId;
 	}

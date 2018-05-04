@@ -45,7 +45,7 @@ public class SeansController {
 
 	@FXML
 	void closeWindow(MouseEvent event) {
-		Main.getPrimaryStage().close();
+		System.exit(0);
 	}
 
 	@FXML
@@ -68,7 +68,7 @@ public class SeansController {
 
 		}
 		int id = tbl_seans.getSelectionModel().getSelectedItem().getIdseans();
-		Main.setSelectedSeansId(id);; 			
+		Main.setSelectedSeansId(id);			
 		Parent parent = FXMLLoader.load(getClass().getResource("/view/ClientView.fxml"));
 		Scene scene = new Scene(parent);
 		Main.getPrimaryStage().setScene(scene);

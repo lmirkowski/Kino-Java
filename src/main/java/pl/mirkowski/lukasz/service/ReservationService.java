@@ -59,5 +59,21 @@ public class ReservationService {
 		session.close();
 		return id;
 	}
+	
+public List<Reservation> getSelected(int idrezerwacje){
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		Transaction trx = session.beginTransaction();
+		Query querry = session.createQuery("FROM Reservation WHERE idrezerwacje=:selectedReservationId");
+		
+		querry.setInteger("selectedReservationId", idrezerwacje);
+
+		@SuppressWarnings("unchecked")
+		List<Reservation> reservations = querry.list();
+		
+		trx.commit();
+		session.close();
+		return reservations;
+	}
 
 }
