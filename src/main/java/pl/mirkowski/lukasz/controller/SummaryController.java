@@ -83,6 +83,12 @@ public class SummaryController {
 
 		try {
 			mailService.sendMail(col_email.getCellData(0), "Reservation", getFormData());
+			Alert successSendMail = new Alert(AlertType.INFORMATION);
+			successSendMail.setTitle("Sukces");
+			successSendMail.setHeaderText("Wys³ano e-mail");
+			successSendMail.setContentText("Na Twój adres e-mail wys³aliœmy potwierdzenie rezerwacji!");
+			successSendMail.show();
+						
 		} catch (MessagingException e) {
 			Alert errorSendMail = new Alert(AlertType.ERROR);
 			errorSendMail.setTitle("Nie uda³o siê wys³aæ maila!");
@@ -92,6 +98,9 @@ public class SummaryController {
 		}
 
 	}
+	
+	
+	
 
 	private ReservationService reservationService;
 
