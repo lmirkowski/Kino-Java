@@ -20,21 +20,33 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Button fx:id="btn_rezerwacja" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#dateAndTime" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #ddbd07;" text="DATA I GODZINA" />
-      <TableView fx:id="tbl_movies" layoutX="12.0" layoutY="237.0" maxHeight="600.0" maxWidth="1000.0" minHeight="472.0" minWidth="1000.0" prefHeight="472.0" prefWidth="1000.0" style="-fx-background-radius: 10;">
+      <Button fx:id="btn_rezerwacja" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#dateAndTime" prefHeight="31.0" prefWidth="139.0" style="-fx-background-color: #ddbd07;" text="DATA I GODZINA">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tbl_movies" layoutX="12.0" layoutY="218.0" maxHeight="600.0" maxWidth="1000.0" minHeight="472.0" minWidth="1000.0" prefHeight="536.0" prefWidth="1000.0" style="-fx-background-radius: 10;">
          <columns>
-            <TableColumn fx:id="col_title" maxWidth="150.0" minWidth="120.0" prefWidth="120.0" style="-fx-background-color: #ddbd07; -fx-word-wrap: break-word;" text="Tytuł" />
-            <TableColumn fx:id="col_rezyser" maxWidth="80.0" minWidth="80.0" style="-fx-background-color: #ddbd07;" text="Reżyser" />
-            <TableColumn fx:id="col_rok" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-color: #ddbd07;" text="Rok produkcji" />
-            <TableColumn fx:id="col_czastrw" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" style="-fx-background-color: #ddbd07;" text="Czas trwania" />
-            <TableColumn fx:id="col_prod" maxWidth="80.0" minWidth="80.0" style="-fx-background-color: #ddbd07;" text="Kraj" />
-            <TableColumn fx:id="col_obsada" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" style="-fx-background-color: #ddbd07;" text="Obsada" />
-            <TableColumn fx:id="col_ogr" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" style="-fx-background-color: #ddbd07;" text="Ogr. wiekowe" />
-            <TableColumn fx:id="col_gatunek" maxWidth="80.0" minWidth="80.0" style="-fx-background-color: #ddbd07;" text="Gatunek" />
-            <TableColumn fx:id="col_opis" maxWidth="1000.0" minWidth="353.0" prefWidth="353.0" style="-fx-background-color: #ddbd07; -fx-word-wrap: break-word;" text="Opis" />
+            <TableColumn fx:id="col_title" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Tytuł" />
+            <TableColumn fx:id="col_rezyser" editable="false" maxWidth="80.0" minWidth="80.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Reżyser" />
+            <TableColumn fx:id="col_rok" editable="false" maxWidth="55.0" minWidth="55.0" prefWidth="55.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Rok produkcji" />
+            <TableColumn fx:id="col_czastrw" editable="false" maxWidth="55.0" minWidth="55.0" prefWidth="55.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Czas trwania" />
+            <TableColumn fx:id="col_prod" editable="false" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Kraj" />
+            <TableColumn fx:id="col_obsada" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Obsada" />
+            <TableColumn fx:id="col_ogr" maxWidth="50.0" minWidth="50.0" prefWidth="50.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Ogr. wiekowe" />
+            <TableColumn fx:id="col_gatunek" editable="false" maxWidth="70.0" minWidth="70.0" prefWidth="70.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Gatunek" />
+            <TableColumn fx:id="col_opis" editable="false" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" resizable="false" style="-fx-background-color: #ddbd07;" text="Opis" />
          </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </TableView>
-      <Button fx:id="btn_goback" layoutX="882.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="POWRÓT" />
+      <Button fx:id="btn_goback" layoutX="882.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="POWRÓT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <Label layoutX="322.0" layoutY="29.0" text="WYBRANY FILM" textFill="#ddbd07">
          <font>
             <Font name="Javanese Text" size="48.0" />

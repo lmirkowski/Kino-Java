@@ -2,6 +2,7 @@ package pl.mirkowski.lukasz.controller;
 
 import java.io.IOException;
 import java.util.List;
+import javax.mail.MessagingException;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,13 +10,16 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import pl.mirkowski.lukasz.Main;
+import pl.mirkowski.lukasz.mail.MailService;
 import pl.mirkowski.lukasz.model.Reservation;
 import pl.mirkowski.lukasz.service.ReservationService;
 
@@ -75,8 +79,20 @@ public class SummaryController {
 	@FXML
 	void sendEmail(MouseEvent event) {
 
+		MailService mailService = new MailService();
+
+		try {
+			mailService.sendMail(col_email.getCellData(0), "Reservation", getFormData());
+		} catch (MessagingException e) {
+			Alert errorSendMail = new Alert(AlertType.ERROR);
+			errorSendMail.setTitle("Nie uda³o siê wys³aæ maila!");
+			errorSendMail.setHeaderText("B³¹d");
+			errorSendMail.setContentText(e.getMessage());
+			errorSendMail.show();
+		}
+
 	}
-	
+
 	private ReservationService reservationService;
 
 	private void setCellValue() {
@@ -94,7 +110,7 @@ public class SummaryController {
 
 	private void loadDataToColumns() {
 		reservationService = new ReservationService();
-		
+
 		List<Reservation> reservations = reservationService.getSelected(Main.getSelectedReservationId());
 
 		ObservableList<Reservation> data = FXCollections.observableArrayList(reservations);
@@ -108,6 +124,19 @@ public class SummaryController {
 		loadDataToColumns();
 		setCellValue();
 
+	}
+
+	private String getFormData() {
+
+		String imie = col_imie.getCellData(0);
+		String nazwisko = col_nazwisko.getCellData(0);
+		Integer nrRezerw = col_nr_rezerw.getCellData(0);
+		String title = col_title.getCellData(0);
+		String sala = col_sala.getCellData(0);
+
+		return "Dziêkujemy za z³o¿enie rezerwacji. Przy zakupie biletu w kasie kina prosimy o powo³anie siê na numer rezerwacji.\n \n"
+				+ "\nNumer Twojej rezerwacji: " + nrRezerw + "\nImiê: " + imie + "\nNazwisko: " + nazwisko
+				+ "\nTytu³ filmu: " + title + "\nSala: " + sala;
 	}
 
 }

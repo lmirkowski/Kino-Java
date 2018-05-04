@@ -44,13 +44,8 @@ public class RepertuarController {
 	@FXML
 	private ImageView img_close;
 
-
 	@FXML
 	private Button btn_opis_filmu;
-	
-	@FXML
-    private Button btn_rezerwacja;
-
 
 	@FXML
 	private Button btn_goback;
@@ -69,7 +64,7 @@ public class RepertuarController {
 
 	@FXML
 	void showMovie(MouseEvent event) throws IOException {
-		
+
 		if (Objects.isNull(tbl_repertuar.getSelectionModel())
 				|| Objects.isNull(tbl_repertuar.getSelectionModel().getSelectedItem())) {
 			Alert error = new Alert(AlertType.ERROR);
@@ -81,12 +76,13 @@ public class RepertuarController {
 
 		}
 		int id = tbl_repertuar.getSelectionModel().getSelectedItem().getIdfilm();
-		Main.setSelectedFilmId(id); 			
+		Main.setSelectedFilmId(id);
 		Parent parent = FXMLLoader.load(getClass().getResource("/view/MovieView.fxml"));
 		Scene scene = new Scene(parent);
 		Main.getPrimaryStage().setScene(scene);
 		scene.setFill(Color.TRANSPARENT);
 	}
+
 	private FilmService filmService;
 
 	private void setCellValue() {
@@ -106,11 +102,6 @@ public class RepertuarController {
 		tbl_repertuar.setItems(data);
 
 	}
-	
-	@FXML
-    void reservationAction(MouseEvent event) {
-
-    }
 
 	public void initialize() {
 

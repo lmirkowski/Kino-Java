@@ -1,6 +1,8 @@
 package pl.mirkowski.lukasz.controller;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -72,6 +74,18 @@ public class KlientController {
 			showAlertFormNotCompleted();
 
 		} else {
+			boolean isValidEmail = validateMail();
+
+			if (!isValidEmail) {
+				Alert error = new Alert(AlertType.ERROR);
+				error.setTitle("B³êdny adres email!");
+				error.setHeaderText("B³¹d");
+				error.setContentText(
+						"B³êdny adres email: " + tf_email.getText() + "\n" + "Proszê podaæ poprawny adres email.");
+				error.show();
+				return;
+			}
+			
 			KlientService klientService = new KlientService();
 			Klient klient = getFormData();
 			klientService.save(klient);
@@ -91,9 +105,16 @@ public class KlientController {
 			Main.getPrimaryStage().setScene(scene);
 			scene.setFill(Color.TRANSPARENT);
 			
-
 		}
 
+	}
+	
+	private boolean validateMail() {
+		String regex = "^[a-zA-Z0-9_!#$%&’*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(tf_email.getText());
+		boolean isValidEmail = matcher.matches();
+		return isValidEmail;
 	}
 
 	private Rezerwacje getData() {

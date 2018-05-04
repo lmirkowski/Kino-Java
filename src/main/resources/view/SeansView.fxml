@@ -20,8 +20,14 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </ImageView>
-      <Button fx:id="btn_rezerwacja" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#reservationAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="REZERWACJA" />
-      <Button fx:id="btn_goback" layoutX="882.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="POWRÓT" />
+      <Button fx:id="btn_rezerwacja" layoutX="20.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#reservationAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="REZERWACJA">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btn_goback" layoutX="882.0" layoutY="806.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="POWRÓT">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
       <TableView fx:id="tbl_seans" layoutX="175.0" layoutY="389.0" prefHeight="200.0" prefWidth="660.0" style="-fx-background-radius: 10;">
          <columns>
             <TableColumn fx:id="col_data" maxWidth="330.0" minWidth="330.0" prefWidth="330.0" style="-fx-background-color: #ddbd07;" text="Data" />

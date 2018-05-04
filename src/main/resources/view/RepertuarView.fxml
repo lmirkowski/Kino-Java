@@ -38,6 +38,5 @@
       </ImageView>
       <Button fx:id="btn_opis_filmu" layoutX="113.0" layoutY="769.0" mnemonicParsing="false" onMouseClicked="#showMovie" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="OPIS FILMU" />
       <Button fx:id="btn_goback" layoutX="793.0" layoutY="769.0" mnemonicParsing="false" onMouseClicked="#goBack" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07#ddbd07;" text="POWRÓT" />
-      <Button fx:id="btn_rezerwacja" layoutX="275.0" layoutY="769.0" mnemonicParsing="false" onMouseClicked="#reservationAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="REZERWACJA" />
    </children>
 </AnchorPane>

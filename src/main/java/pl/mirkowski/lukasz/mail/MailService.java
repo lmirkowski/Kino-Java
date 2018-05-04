@@ -27,6 +27,7 @@ public class MailService {
 		
 		//tworzenie wiadomoœci
 		MimeMessage message = new MimeMessage(mailSession);
+		
 		message.setSubject(subject);
 		message.setContent(content, "text/plain; charset=UTF-8");
 		message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));

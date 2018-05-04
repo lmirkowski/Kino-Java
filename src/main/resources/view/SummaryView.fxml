@@ -33,27 +33,37 @@
             <Font name="Javanese Text" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="20.0" layoutY="288.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Dziękujemy za dokonanie rezerwacji. Przy zakupie biletów prosimy o powołąnie się na numer rezerwacji." textFill="#ddbd07" wrapText="true">
+      <Label alignment="CENTER" layoutX="42.0" layoutY="194.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Dziękujemy za dokonanie rezerwacji. " textAlignment="CENTER" textFill="#ddbd07" wrapText="true">
          <font>
-            <Font size="18.0" />
+            <Font size="36.0" />
          </font>
       </Label>
-      <TableView fx:id="tbl_rezerwacje" layoutX="13.0" layoutY="367.0" prefHeight="118.0" prefWidth="1000.0">
+      <TableView fx:id="tbl_rezerwacje" layoutX="13.0" layoutY="367.0" prefHeight="118.0" prefWidth="1000.0" style="-fx-background-radius: 10;">
          <columns>
-            <TableColumn fx:id="col_nr_rezerw" prefWidth="76.0" text="Nr rezerwacji" />
-            <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="184.0" text="Tytuł" />
-            <TableColumn fx:id="col_data" prefWidth="94.0" text="Data" />
-            <TableColumn fx:id="col_godzina" prefWidth="71.0" text="Godzina" />
-            <TableColumn fx:id="col_sala" prefWidth="53.0" text="Sala" />
-            <TableColumn fx:id="col_imie" prefWidth="143.0" text="Imię" />
-            <TableColumn fx:id="col_nazwisko" prefWidth="136.0" text="Nazwisko" />
-            <TableColumn fx:id="col_email" prefWidth="120.0" text="email" />
-            <TableColumn fx:id="col_telefon" prefWidth="146.0" text="Telefon" />
+            <TableColumn fx:id="col_nr_rezerw" prefWidth="76.0" style="-fx-background-color: #ddbd07;" text="Nr rezerwacji" />
+            <TableColumn fx:id="col_title" minWidth="0.0" prefWidth="184.0" style="-fx-background-color: #ddbd07;" text="Tytuł" />
+            <TableColumn fx:id="col_data" prefWidth="94.0" style="-fx-background-color: #ddbd07;" text="Data" />
+            <TableColumn fx:id="col_godzina" prefWidth="71.0" style="-fx-background-color: #ddbd07;" text="Godzina" />
+            <TableColumn fx:id="col_sala" prefWidth="53.0" style="-fx-background-color: #ddbd07;" text="Sala" />
+            <TableColumn fx:id="col_imie" prefWidth="143.0" style="-fx-background-color: #ddbd07;" text="Imię" />
+            <TableColumn fx:id="col_nazwisko" prefWidth="136.0" style="-fx-background-color: #ddbd07;" text="Nazwisko" />
+            <TableColumn fx:id="col_email" prefWidth="120.0" style="-fx-background-color: #ddbd07;" text="email" />
+            <TableColumn fx:id="col_telefon" prefWidth="146.0" style="-fx-background-color: #ddbd07;" text="Telefon" />
          </columns>
       </TableView>
-      <Label layoutX="20.0" layoutY="522.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Jeśli chcesz otrzymać potwierdzenie rezerwacji mailem, kliknij przycisk poniżej" textFill="#ddbd07" wrapText="true">
+      <Label layoutX="20.0" layoutY="698.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Jeśli chcesz otrzymać potwierdzenie rezerwacji mailem, kliknij przycisk poniżej" textFill="#ddbd07" wrapText="true">
          <font>
-            <Font size="18.0" />
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="21.0" layoutY="247.0" maxWidth="991.0" minWidth="700.0" prefHeight="108.0" prefWidth="991.0" text="Przy zakupie biletów prosimy o powołąnie się na numer rezerwacji." textAlignment="CENTER" textFill="#ddbd07" wrapText="true">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="50.0" layoutY="571.0" maxWidth="933.0" minWidth="700.0" prefHeight="51.0" prefWidth="933.0" text="Życzymy udanego seansu." textAlignment="CENTER" textFill="#ddbd07" wrapText="true">
+         <font>
+            <Font size="36.0" />
          </font>
       </Label>
    </children>
